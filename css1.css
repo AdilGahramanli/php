@@ -1,0 +1,75 @@
+.title {
+
+    font-size: 20px;
+    color: blueviolet;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+
+}
+.header1{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(216, 208, 255);
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    font-size: 2rem;
+    
+}
+
+ul{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+    gap: 2rem;
+    
+}
+
+li {
+    padding : 0.5rem;
+    border-radius: 25px;
+    border: 2px solid rgb(111, 85, 136);
+    background-color:rgb(204, 204, 255);
+}
+.logo1 {
+    width:9rem;
+    height: 9rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(152, 125, 196);
+}
+.logof {
+
+    width: 2rem;
+    height: 2rem;
+}
+.product {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10rem;
+}
+
+.couverture
+ {
+    width: 10rem;
+    height:15rem;
+}
+
+.titreHeader {
+    text-align: center;
+    font-size: 8rem;
+    background-color: rgb(204, 204, 255);
+}
