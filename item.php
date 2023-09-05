@@ -1,24 +1,16 @@
-<?php include'header.php';?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>item</title>
-    <link rel="stylesheet" href="css1.css">
-    <style> ul{list-style-type: none;}</style>
-</head>
+<?php include'header.php';
+ include 'multidimensional-catalog.php';
+ include 'simple-catalog.php';
+include 'catalog-with-keys.php'; ?>
 
 
-<body>
 <?php
 $Nom="Apprendre ou à laisser";
 $Prix=25;
 $Photo="https://journals.openedition.org/ree/docannexe/file/8419/couverture_houssaye.png"
 ?>  
 Affichage
-<?php include 'catalog-with-keys.php'; ?>
+
 <div class="product">
     <div class="livres">
     <img class="couverture" src="<?php echo $Photo ?>" alt="couverture du livre"> 
@@ -41,20 +33,24 @@ Affichage
     <div class="livres">
     <img class="couverture" src="<?php echo $HistoireDuLatex["Photo"];?>">
     <h3> <?php echo $HistoireDuLatex["Nom"];?></h3>
-    <p> <?php echo $HistoireDuLatex["Prix"];?><p>
+    <p> <?php echo $HistoireDuLatex["Prix"];?>€<p>
     
     </div>
     
 </div>
 
-<?php include 'simple-catalog.php';
-    
-?>
+ 
+    <div class="livres">
+        <img class="couverture" src="<?php echo $products2 [0][4];?>">
+        <h3> <?php echo $products2 [0][1];?></h3>
+    </div>
 
 
 
-</body>
 
 
-</html>
+
+
+
 <?php include('footer.php');?>
+

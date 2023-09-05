@@ -1,3 +1,5 @@
+
+</body>
 <footer>
 Mes sponsors
 <div class="footer">
@@ -15,3 +17,5 @@ Mes sponsors
 
 </div>
 </footer>
+
+</html>
