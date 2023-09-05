@@ -13,24 +13,37 @@
 
 <body>
 <?php
-$Nom="Apprendre le php en 10 leçons";
+$Nom="Apprendre ou à laisser";
 $Prix=25;
-$Photo="https://ec56229aec51f1baff1d-185c3068e22352c56024573e929788ff.ssl.cf1.rackcdn.com/attachments/large/9/0/5/010955905.jpg"
+$Photo="https://journals.openedition.org/ree/docannexe/file/8419/couverture_houssaye.png"
 ?>  
 Affichage
 <?php include 'catalog-with-keys.php'; ?>
 <div class="product">
+    <div class="livres">
+    <img class="couverture" src="<?php echo $Photo ?>" alt="couverture du livre"> 
     <h2 class="title"> "<?php echo $Nom ?>" </h2>
     Le prix est de <?php echo $Prix ?> €
-    <img class="couverture" src="<?php echo $Photo ?>" alt="couverture du livre"> 
+    
+    </div>
+    <div class="livres">
+    <img class="couverture" src="<?php echo $ApprendrePhp["Photo"]?>">
     <h3> <?php  echo $ApprendrePhp["Nom"];?></h3>
     <p><?php echo $ApprendrePhp["Prix"];?>€</p>
-    <img class="couverture" src="<?php echo $ApprendrePhp["Photo"]?>">
-
+    
+    </div>
+    <div class="livres">
+    <img class="couverture" src="<?php echo $ComprendreLaMatrice["Photo"];?>">
     <h3> <?php echo $ComprendreLaMatrice["Nom"];?></h3>
     <p> <?php echo $ComprendreLaMatrice["Prix"];?>€</p>
-    <img class="couverture" src="<?php echo $ComprendreLaMatrice["Photo"];?>">
-
+    
+    </div>
+    <div class="livres">
+    <img class="couverture" src="<?php echo $HistoireDuLatex["Photo"];?>">
+    <h3> <?php echo $HistoireDuLatex["Nom"];?></h3>
+    <p> <?php echo $HistoireDuLatex["Prix"];?><p>
+    
+    </div>
     
 </div>
 
