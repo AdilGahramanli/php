@@ -1,7 +1,10 @@
-<?php include'header.php';
+<?php include'header.php'; ?>
+<?php 
  include 'multidimensional-catalog.php';
  include 'simple-catalog.php';
-include 'catalog-with-keys.php'; ?>
+include 'catalog-with-keys.php'; 
+?>
+
 
 
 <?php
@@ -9,13 +12,19 @@ $Nom="Apprendre ou à laisser";
 $Prix=25;
 $Photo="https://journals.openedition.org/ree/docannexe/file/8419/couverture_houssaye.png"
 ?>  
-Affichage
+<!-- BOUCLES WHILE -->
+<div class= "annonces">
+Le nouveau livre Apprendre le Php n'est pas à 26 <br>
+<?php while ($Prix>20) {  echo "ni à".$Prix."<br>"; $Prix--; } 
+echo "mais à".$Prix."€ !!!!!"; ?>
+</div>
 
 <div class="product">
     <div class="livres">
-    <img class="couverture" src="<?php echo $Photo ?>" alt="couverture du livre"> 
-    <h2 class="title"> "<?php echo $Nom ?>" </h2>
+    <img class="couverture" src="<?php echo $Photo ; ?>" alt="couverture du livre"> 
+    <h2 class="title"> "<?php echo $Nom; ?>" </h2>
     Le prix est de <?php echo $Prix ?> €
+    <?php for ($Prix=20; $Prix<25; $Prix++) {echo "SOLDES -".$products2["discount"]."%";} ?>
     
     </div>
     <div class="livres">
@@ -34,6 +43,7 @@ Affichage
     <img class="couverture" src="<?php echo $HistoireDuLatex["Photo"];?>">
     <h3> <?php echo $HistoireDuLatex["Nom"];?></h3>
     <p> <?php echo $HistoireDuLatex["Prix"];?>€<p>
+        
     
     </div>
     
@@ -41,8 +51,12 @@ Affichage
 
  
     <div class="livres">
-        <img class="couverture" src="<?php echo $products2 [0][4];?>">
+        <img class="couverture" src="<?php echo $products2 [72];?>">
         <h3> <?php echo $products2 [0][1];?></h3>
+        <?php var_dump($products2);
+        print_r ($products2);
+        ?>
+
     </div>
 
 
