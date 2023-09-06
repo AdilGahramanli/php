@@ -1,70 +1,58 @@
-<?php include'header.php'; ?>
-<?php 
- include 'multidimensional-catalog.php';
- include 'simple-catalog.php';
-include 'catalog-with-keys.php'; 
+<?php
+include("my-functions.php");
+
+include("simple-catalog.php");
+include("multidimensional-catalog.php");
+$librairie = ["livre1", "livre2", "livre3",];
+// <!-- inclure un tableau associatif simple -->
+$i = 0;
+include("header.php");
 ?>
 
+<h1> Librairie en ligne </h1>
+
+<div class="testzone">
+    <h2>Espace de tests </h2>
+    
+    <!-- Boucle WHILE -->
+    <h3>Boucle While - Tableau $Paint</h3>
+    <?php while ($i < 6) {
+        echo $Paint[$i] . "<br>";
+        $i++;
+        echo formatPrice(1000);
+    } ?>
+
+    <?php print_r($Paint[0]); ?>
 
 
-<?php
-$Nom="Apprendre ou à laisser";
-$Prix=25;
-$Photo="https://journals.openedition.org/ree/docannexe/file/8419/couverture_houssaye.png"
-?>  
-<!-- BOUCLES WHILE -->
-<div class= "annonces">
-Le nouveau livre Apprendre le Php n'est pas à 26 <br>
-<?php while ($Prix>20) {  echo "ni à".$Prix."<br>"; $Prix--; } 
-echo "mais à".$Prix."€ !!!!!"; ?>
+
+    // <!--  Boucle FOR -->
+    <h3>Boucle For - Tableau $librairie</h3>
+    <!-- <?php print_r($librairie);
+    // print_r ($Library); ?> -->
+    
+    <?php for ($i = 0; $i < count($librairie); $i++) {
+    
+        echo $librairie[$i]."<br>";
+    }
+    ?>
+
+
+     <!-- Boucle FOREACH -->
+     <h3>Boucle Foreach - $Library</h3>
+    <?php foreach($Library as $livre => $titreLivre) : ?>
+        <?php 
+            foreach($titreLivre as $critère => $value)
+            echo $livre . " > "  . $critère . " > " . $value . "<br>"; ?>
+        <?php endforeach; ?>
+
+
 </div>
 
-<div class="product">
-    <div class="livres">
-    <img class="couverture" src="<?php echo $Photo ; ?>" alt="couverture du livre"> 
-    <h2 class="title"> "<?php echo $Nom; ?>" </h2>
-    Le prix est de <?php echo $Prix ?> €
-    <?php for ($Prix=20; $Prix<25; $Prix++) {echo "SOLDES -".$products2["discount"]."%";} ?>
-    
-    </div>
-    <div class="livres">
-    <img class="couverture" src="<?php echo $ApprendrePhp["Photo"]?>">
-    <h3> <?php  echo $ApprendrePhp["Nom"];?></h3>
-    <p><?php echo $ApprendrePhp["Prix"];?>€</p>
-    
-    </div>
-    <div class="livres">
-    <img class="couverture" src="<?php echo $ComprendreLaMatrice["Photo"];?>">
-    <h3> <?php echo $ComprendreLaMatrice["Nom"];?></h3>
-    <p> <?php echo $ComprendreLaMatrice["Prix"];?>€</p>
-    
-    </div>
-    <div class="livres">
-    <img class="couverture" src="<?php echo $HistoireDuLatex["Photo"];?>">
-    <h3> <?php echo $HistoireDuLatex["Nom"];?></h3>
-    <p> <?php echo $HistoireDuLatex["Prix"];?>€<p>
-        
-    
-    </div>
-    
+<div class="container">
+
+
+
 </div>
 
- 
-    <div class="livres">
-        <img class="couverture" src="<?php echo $products2 [72];?>">
-        <h3> <?php echo $products2 [0][1];?></h3>
-        <?php var_dump($products2);
-        print_r ($products2);
-        ?>
-
-    </div>
-
-
-
-
-
-
-
-
-<?php include('footer.php');?>
-
+<?php include("footer.php"); ?>

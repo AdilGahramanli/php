@@ -1,5 +1,3 @@
 <?php
-$products = ["Apprendre le php", "Comprendre la matrice", "L'histoire du latex"];
-sort($products);
-echo($products[0]);
-?>
+$Paint = ["Rose", "Jaune", "Pourpre", "Indigo", "Bleu Klein", "Brun clair"];
+sort($Paint);
