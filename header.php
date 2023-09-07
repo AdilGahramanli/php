@@ -23,7 +23,7 @@
         <ul>
 
             <li> <a href="item.php">Accueil </a></li>
-            <li>Livres</li>
+            <li><a href="multidimensional-catalog.php"> Multidimensional library </a></li>
             <li>Parchemins anciens</li>
         </ul>
     </nav>
