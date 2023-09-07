@@ -18,9 +18,7 @@
     align-items: center;
 }
 
-* {box-sizing: border-box;
-        
-}
+
 
 .testzone {
     display: grid;
@@ -32,7 +30,7 @@
     /* background-color: rgb(209, 210, 216); */
 }
 
-.container0 > while {
+.testzone > while {
     
     display: flex;
     box-sizing: border-box;
@@ -44,7 +42,7 @@
 
 }
 
-.container0 > for {
+.testzone > for {
     display: flex;
     box-sizing: border-box;
     flex-wrap: wrap;
@@ -53,7 +51,7 @@
     border: 1rem solid rgb(215, 228, 230);
 }
 
-.container0 > foreach {
+.testzone > foreach {
     display: flex;
     box-sizing: border-box;
     flex-wrap: wrap;
@@ -62,7 +60,7 @@
     border: 1rem solid rgb(215, 228, 230);
 }
 
-/* .item1 > img {
+.item1 > img {
     width: 7rem;
 }
 
@@ -94,4 +92,4 @@
    border: 1px solid blue;
 
 } 
- */
+

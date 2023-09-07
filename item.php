@@ -21,7 +21,6 @@ include("header.php");
             <?php while ($i < 6) {
                 echo $Paint[$i] . "<br>";
                 $i++;
-                
             }
             ?>
 
@@ -61,38 +60,39 @@ include("header.php");
 </div>
 
 <div class="container0">
-    <div class="item1">
-
-
+    <div class="item">
         <img src="<?php echo $Library["ApprendrePhp"]["picture_url"] ?>">
-        <p><?php formatPrice($Library["ApprendrePhp"]["price"]).number_format(); ?></p>
-
-
-
-    </div>
-
-    
-    <div class="item2">
-
-    <img src="<?php echo $Library["Bodybuilding"]["picture_url"] ?>" >
-    <p> <?php formatPrice(number_format($Library["ApprendrePhp"]["price"], 2, ",", " ")); ?> </p>
-
-    </div>
-
-    
-    <div class="item3">
-
-    <img src="<?php echo $Library["Myopie"]["picture_url"] ?>" >
-    <p><?php formatPrice($Library["ApprendrePhp"]["price"]); ?></p>
-
+        <p><?php echo number_format($Library["ApprendrePhp"]["price"], 2); ?></p>
 
     </div>
 
 
-    <div class="container">
+    <div class="item">
 
+        <img src="<?php echo $Library["Bodybuilding"]["picture_url"] ?>">
+        <p> <?php echo number_format($Library["Bodybuilding"]["price"], 2); ?> </p>
+
+    </div>
+
+
+    <div class="item">
+
+        <img src="<?php echo $Library["Myopie"]["picture_url"] ?>">
+        <p><?php echo number_format($Library["Myopie"]["price"], 2); ?></p>
 
 
     </div>
 
-    <?php include("footer.php"); ?>
+</div>
+
+
+<div class="container">
+    <p>
+        blablabla
+    </p>
+
+</div>
+
+
+
+<?php include("footer.php"); ?>

@@ -1,7 +1,7 @@
 <?php
-function formatPrice (float $prix):float {
+function formatPrice (float $price):string {
 
-    return $prix ." €";
+    return $price ." €";
 } 
 
 
