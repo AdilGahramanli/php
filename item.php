@@ -18,14 +18,14 @@ include("header.php");
     <div class="while">
         <h3>Boucle While - Tableau $Paint</h3>
         <p>
-        <?php while ($i < 6) {
-            echo $Paint[$i] . "<br>";
-            $i++;
-            echo formatPrice(1000);
-        } ?>
+            <?php while ($i < 6) {
+                echo $Paint[$i] . "<br>";
+                $i++;
+                
+            }
+            ?>
 
-        <?php print_r($Paint[0]); ?>
-    </p>
+        </p>
 
     </div>
 
@@ -34,15 +34,15 @@ include("header.php");
         // <!--  Boucle FOR -->
         <h3>Boucle For - Tableau $librairie</h3>
         <p>
-        <!-- <?php print_r($librairie);
-                // print_r ($Library); 
-                ?> -->
-        
-        <?php for ($i = 0; $i < count($librairie); $i++) {
+            <!-- <?php print_r($librairie);
+                    // print_r ($Library); 
+                    ?> -->
 
-            echo $librairie[$i] . "<br>";
-        }
-        ?>
+            <?php for ($i = 0; $i < count($librairie); $i++) {
+
+                echo $librairie[$i] . "<br>";
+            }
+            ?>
         </p>
     </div>
 
@@ -51,19 +51,48 @@ include("header.php");
         <!-- Boucle FOREACH -->
         <h3>Boucle Foreach - $Library</h3>
         <p>
-        <?php foreach ($Library as $livre => $titreLivre) : ?>
-            <?php
-            foreach ($titreLivre as $critère => $value)
-                echo $livre . " > "  . $critère . " > " . $value . "<br>"; ?>
-        <?php endforeach; ?>
+            <?php foreach ($Library as $livre => $titreLivre) : ?>
+                <?php
+                foreach ($titreLivre as $critère => $value)
+                    echo $livre . " > "  . $critère . " > " . $value . "<br>"; ?>
+            <?php endforeach; ?>
         </p>
     </div>
 </div>
 
-<div class="container">
+<div class="container0">
+    <div class="item1">
+
+
+        <img src="<?php echo $Library["ApprendrePhp"]["picture_url"] ?>">
+        <p><?php formatPrice($Library["ApprendrePhp"]["price"]).number_format(); ?></p>
 
 
 
-</div>
+    </div>
 
-<?php include("footer.php"); ?>
+    
+    <div class="item2">
+
+    <img src="<?php echo $Library["Bodybuilding"]["picture_url"] ?>" >
+    <p> <?php formatPrice(number_format($Library["ApprendrePhp"]["price"], 2, ",", " ")); ?> </p>
+
+    </div>
+
+    
+    <div class="item3">
+
+    <img src="<?php echo $Library["Myopie"]["picture_url"] ?>" >
+    <p><?php formatPrice($Library["ApprendrePhp"]["price"]); ?></p>
+
+
+    </div>
+
+
+    <div class="container">
+
+
+
+    </div>
+
+    <?php include("footer.php"); ?>
