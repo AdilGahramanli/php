@@ -60,9 +60,18 @@ include("header.php");
 </div>
 
 <div class="container0">
+    
     <div class="item">
         <img src="<?php echo $Library["ApprendrePhp"]["picture_url"] ?>">
-        <p><?php echo number_format($Library["ApprendrePhp"]["price"], 2); ?></p>
+        <p><?php
+            
+            echo formatPrice($Library["ApprendrePhp"]["price"]). "<br> PrixHT : ".
+            formatPrice(priceExcludingVAT($Library["ApprendrePhp"]["price"])) . "<br> PROMO = " . 
+            formatPrice(discountedPrice($Library["ApprendrePhp"]["price"] , $Library["ApprendrePhp"]["discount"]));
+            
+            ?>
+        </p>
+        
 
     </div>
 
@@ -70,7 +79,9 @@ include("header.php");
     <div class="item">
 
         <img src="<?php echo $Library["Bodybuilding"]["picture_url"] ?>">
-        <p> <?php echo number_format($Library["Bodybuilding"]["price"], 2); ?> </p>
+        <p> <?php echo formatPrice($Library["Bodybuilding"]["price"]). "<br> PrixHT : ".
+        formatPrice(priceExcludingVAT($Library["Bodybuilding"]["price"])) . "<br> PROMO = " . 
+        formatPrice(discountedPrice($Library["Bodybuilding"]["price"] , $Library["Bodybuilding"]["discount"]));?> </p>
 
     </div>
 
@@ -78,7 +89,9 @@ include("header.php");
     <div class="item">
 
         <img src="<?php echo $Library["Myopie"]["picture_url"] ?>">
-        <p><?php echo number_format($Library["Myopie"]["price"], 2); ?></p>
+        <p><?php echo formatPrice($Library["Myopie"]["price"]). "<br> PrixHT : ".
+        formatPrice(priceExcludingVAT($Library["Myopie"]["price"])) . "<br> PROMO = " . 
+        formatPrice(discountedPrice($Library["Myopie"]["price"] , $Library["Myopie"]["discount"])); ?></p>
 
 
     </div>
