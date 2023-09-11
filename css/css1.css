@@ -122,3 +122,10 @@ input {
     height: 25rem;
     background-image: url(https://img.freepik.com/photos-premium/portail-magique-fantastique-portail-dans-foret-elfique-vers-autre-monde-art-numerique-illustration_717906-143.jpg);
 }
+
+button {
+    width : 15rem;
+    height: 3rem;
+    background-color: rgb(160, 245, 185);
+    border-radius: 11px;
+}

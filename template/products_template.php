@@ -16,14 +16,18 @@
         }
         ?>
     </p>
+    <form method="post" action="cart.php">
+        <input type="hidden" id="<?php echo $library["title"]; ?>" name="" value = "<?php echo $library["title"]; ?>"/>
     <p><label for="quantity"> Quantité : </label>
         <input type="number" id="quantity" name="quantity" min="0">
     </p>
     <p>
-        <button <?php if (! $library['availability']): ?>disabled<?php endif; ?>>
-            Acheter
+        <button type = submit <?php if (! $library['availability']): ?>disabled<?php endif; ?>>
+            COMMANDER
             <!-- ouvre un formulaire, envoi les infos au panier -->
         </button>
     </p>
+
+    </form>
 
 </div>
