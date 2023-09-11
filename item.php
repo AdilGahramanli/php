@@ -1,111 +1,39 @@
 <?php
-include("my-functions.php");
+ include ("multidimensional-catalog.php");
+// include ("simple-catalog.php");
 
-include("simple-catalog.php");
-include("multidimensional-catalog.php");
-$librairie = ["livre1", "livre2", "livre3",];
-// <!-- inclure un tableau associatif simple -->
-$i = 0;
-include("header.php");
+include("service/my-functions.php");
+
+
+
+include("template/header.php");
 ?>
 
 <h1> Librairie en ligne </h1>
 
-<div class="testzone">
-
-
-    <!-- Boucle WHILE -->
-    <div class="while">
-        <h3>Boucle While - Tableau $Paint</h3>
-        <p>
-            <?php while ($i < 6) {
-                echo $Paint[$i] . "<br>";
-                $i++;
-            }
-            ?>
-
-        </p>
-
-    </div>
-
-
-    <div class="for">
-        // <!--  Boucle FOR -->
-        <h3>Boucle For - Tableau $librairie</h3>
-        <p>
-            <!-- <?php print_r($librairie);
-                    // print_r ($Library); 
-                    ?> -->
-
-            <?php for ($i = 0; $i < count($librairie); $i++) {
-
-                echo $librairie[$i] . "<br>";
-            }
-            ?>
-        </p>
-    </div>
-
-    <div class="foreach">
-
-        <!-- Boucle FOREACH -->
-        <h3>Boucle Foreach - $Library</h3>
-        <p>
-            <?php foreach ($Library as $livre => $titreLivre) : ?>
-                <?php
-                foreach ($titreLivre as $critère => $value)
-                    echo $livre . " > "  . $critère . " > " . $value . "<br>"; ?>
-            <?php endforeach; ?>
-        </p>
-    </div>
-</div>
-
 <div class="container0">
-    
-    <div class="item">
-        <img src="<?php echo $Library["ApprendrePhp"]["picture_url"] ?>">
-        <p><?php
-            
-            echo formatPrice($Library["ApprendrePhp"]["price"]). "<br> PrixHT : ".
-            formatPrice(priceExcludingVAT($Library["ApprendrePhp"]["price"])) . "<br> PROMO = " . 
-            formatPrice(discountedPrice($Library["ApprendrePhp"]["price"] , $Library["ApprendrePhp"]["discount"]));
-            
-            ?>
-        </p>
+
         
 
-    </div>
+        <?php 
+       
+        
+        foreach ($libraries as $library) {
+           
+           include "template/products_template.php";
+        }
 
 
-    <div class="item">
-
-        <img src="<?php echo $Library["Bodybuilding"]["picture_url"] ?>">
-        <p> <?php echo formatPrice($Library["Bodybuilding"]["price"]). "<br> PrixHT : ".
-        formatPrice(priceExcludingVAT($Library["Bodybuilding"]["price"])) . "<br> PROMO = " . 
-        formatPrice(discountedPrice($Library["Bodybuilding"]["price"] , $Library["Bodybuilding"]["discount"]));?> </p>
-
-    </div>
+            
+        ?>
+        
 
 
-    <div class="item">
-
-        <img src="<?php echo $Library["Myopie"]["picture_url"] ?>">
-        <p><?php echo formatPrice($Library["Myopie"]["price"]). "<br> PrixHT : ".
-        formatPrice(priceExcludingVAT($Library["Myopie"]["price"])) . "<br> PROMO = " . 
-        formatPrice(discountedPrice($Library["Myopie"]["price"] , $Library["Myopie"]["discount"])); ?></p>
-
-
-    </div>
-
-</div>
-
-
-<div class="container">
-    <p>
-        blablabla
-    </p>
 
 </div>
 
 
 
-<?php include("footer.php"); ?>
+
+
+<?php include("template/footer.php"); ?>

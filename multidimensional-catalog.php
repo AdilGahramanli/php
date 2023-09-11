@@ -1,10 +1,41 @@
 <?php
 
 
-$Library=[
-    "ApprendrePhp"=>["name"=>"Apprendre le Php", "price" =>"3000", "weight"=>20, "discount"=>50, "picture_url"=>"https://www.label-emmaus.co/media/ext/540x540/d1kvfoyrif6wzg.cloudfront.net/assets/images/56/8130/none_44409bd39161b5e953727549a4cf6599_44409bd.JPEG" ],
-    "Bodybuilding"=>["name"=>"Sculpter ses biscotos", "price"=>"1500", "weight"=>"107", "discount"=>50, "picture_url"=>"https://m.media-amazon.com/images/I/71F2SxgwJoL._AC_UF894,1000_QL80_.jpg"],
-    "Myopie"=>["name"=>"Comment soigner ma myopie ?", "price"=>"2500", "weight"=>"187", "discount"=>50, "picture_url"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr4YHiDUTIXUxb0Lo5pxm7hfgzIfGNpWPMYA&usqp=CAU"],
-]
+$libraries = [
+    "grimoire1"=>[
+        "title" => "Mon grimoire de rituels magiques",
+        "price" => 4999,
+        "discount"=> 20,
+        "description" => "Le livre des ombres de la sorcière",
+        "image" => "image/GrimoireRituelsMagiques.jpg",
+        "availability" => true,
+        "quantité" => 0,
+    ],
+    "grimoire2"=>[
+        "title" => "Le grimoire du bien-être",
+        "price" => 2800,
+        "discount"=> 80,
+        "description" => "Rituels de guérison et sorts d'apaisement </br>pour prendre soin de sa sorcière intérieure",
+        "image" => "image/GrimoireDuBienEtre.jpg",
+        "availability" => true,
+        "quantité" => 0,
+    ],
+    "grimoire3"=>[
+        "title" => "Mes recettes",
+        "price" => 1800,
+        "discount"=> null,
+        "description" => "Recettes 100% magiques",
+        "image" => "image/MesRecettes.jpg",
+        "availability" => false,
+        "quantité" => 0,
+    ]
+];
+
+
 
 ?>
+
+<form>
+    <h4>
+
+</form>
