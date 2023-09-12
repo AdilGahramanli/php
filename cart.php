@@ -16,7 +16,7 @@ $tva = $total - $totalHT;
 
     <h3> <?php echo  "Produit <br><br>" . $titre  . "<br>"; ?> </h3>
             <p> 
-                <b>prix unitaire <br></b><?php echo ($prixUnitaire) . " - " . $discount . "<br><br>"; ?>
+                <b>prix unitaire <br></b><?php echo formatPrice($prixUnitaire) . " - " . $discount . " %<br>" .formatPrice($prixUnitairePromo) . "<br>"; ?>
                 
             </p>
 
@@ -25,7 +25,7 @@ $tva = $total - $totalHT;
             </p>
 
             <p>
-                <?php echo "<b>Total</b> <br>" . $total; ?>
+                <?php echo "<b>Total</b> <br>" . formatPrice($total); ?>
             </p>
 
             <p class="form_totalHT">
@@ -33,11 +33,11 @@ $tva = $total - $totalHT;
             </p>
 
             <p class="form_TVA">
-                <?php echo formatPrice($tva); ?>
+                <?php echo "TVA " . formatPrice($tva); ?>
             </p>
 
             <p class="form_totalTTC">
-                <?php echo formatPrice($total); ?>
+                <?php echo "Total TTC " . formatPrice($total); ?>
 
             </p>
 

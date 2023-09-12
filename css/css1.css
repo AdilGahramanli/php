@@ -156,3 +156,6 @@ button {
     grid-area: d;
 }
 
+.form_totalTTC {
+    grid-area: e;
+}
