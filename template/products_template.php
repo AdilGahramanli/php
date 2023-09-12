@@ -1,33 +1,51 @@
+
+
+
 <div class="item">
     <img class="imageItem" src="<?php echo $library["image"]; ?>">
     <h3><?php echo $library["title"]; ?></h3>
 
     <p>
-        <?php echo $library["description"] ."<br>"; ?></br>
-      
-        <?php if ($library["availability"] == false) { 
-        echo "<del>Indisponible</del>"."<br>";
+        <?php echo $library["description"] . "<br>"; ?></br>
+
+        <?php if ($library["availability"] == false) {
+            echo "<del>Indisponible</del>" . "<br>";
         } else {
-             
-             echo  formatPrice($library["price"]) . " <br><br> ";
-             if ($library["discount"]!== null) {
-                echo "PROMOTION = " . formatPrice(discountedPrice($library["price"], $library["discount"]));
+
+
+            if ($library["discount"] !== null) {
+                echo formatPrice($library["price"]) . "   TTC - " . $library["discount"] . " % <br>";
+                echo formatPrice(discountedPrice($library["price"], $library["discount"]));
+            } 
+            else {
+                echo  formatPrice($library["price"]) . " <br><br> ";
             }
         }
         ?>
     </p>
-    <form method="post" action="cart.php">
-        <input type="hidden" id="<?php echo $library["title"]; ?>" name="" value = "<?php echo $library["title"]; ?>"/>
-    <p><label for="quantity"> Quantité : </label>
-        <input type="number" id="quantity" name="quantity" min="0">
-    </p>
+
     <p>
-        <button type = submit <?php if (! $library['availability']): ?>disabled<?php endif; ?>>
+        <form method="POST" action="cart.php">
+            
+        <input type="hidden" type="text" id="image" name="image" src="<?php echo $library["image"]; ?>" />
+            
+
+        <input type="hidden" id="title" name="title" value="<?php echo ($library["title"]); ?>" />
+        <input type="hidden" id="discountedPrice" name="discountedPrice" value="<?php echo discountedPrice($library["price"], $library["discount"]);?>" />
+        <input type="hidden" id="price" name="price" value="<?php echo ($library["price"]) ?>" />
+        <input type="hidden" id="discount" name="discount" value="<?php echo $library["discount"]; ?>" />
+
+        <label for="quantity"> Quantité : </label>
+        <input type="number" id="quantity" name="quantity" min="0"><br><br>
+
+
+        <button type=submit <?php if (!$library['availability']) : ?>disabled<?php endif; ?>>
             COMMANDER
             <!-- ouvre un formulaire, envoi les infos au panier -->
         </button>
-    </p>
 
     </form>
+    </p>
+
 
 </div>

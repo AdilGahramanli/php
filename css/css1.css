@@ -129,3 +129,30 @@ button {
     background-color: rgb(160, 245, 185);
     border-radius: 11px;
 }
+
+.form_panier {
+    width : 50%;
+    height:auto;
+    margin: 1rem;
+    padding: 2rem;
+    border: 0.3rem solid green;
+    display: grid;
+    grid-template-areas: "a a a a"
+                           " . . . c"
+                           ". . . d"
+                           " . . . e" ;
+    gap: 1rem;
+}
+
+.form_totalHT {
+    grid-area: c;
+}
+
+.form_panier > * {
+    background-color: rgb(175, 226, 192);
+}
+
+.form_TVA {
+    grid-area: d;
+}
+
