@@ -11,3 +11,13 @@ function priceExcludingVAT(float $price):string {
 function discountedPrice(float $price, float $discount):float {
     return $price - ($price*$discount/100);
 }
+
+function formatWeight_g(int $weight):string{
+    if ($weight <1000) {
+    return $weight . " g";}
+    else {return $weight * 0.01 ." Kg";}
+}
+
+function formatWeight_kg(int $weight):string {
+    return $weight * 0.01 ." Kg";
+}

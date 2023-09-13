@@ -140,7 +140,10 @@ button {
     grid-template-areas: "a a a a"
                            " . . . c"
                            ". . . d"
-                           " . . . e" ;
+                           " kg T . e"
+                           "f f f g"
+                           ". . . h"
+                           ". . . i" ;
     gap: 1rem;
 }
 
@@ -158,4 +161,28 @@ button {
 
 .form_totalTTC {
     grid-area: e;
+}
+
+.transporteur {
+    grid-area: f;
+}
+
+.validation{
+    grid-area: g;
+}
+
+.transport_price {
+    grid-area: h;
+}
+
+.transportTTC {
+    grid-area: i;
+}
+
+.weight {
+    grid-area: kg;
+}
+
+.transporteurchoice {
+    grid-area: T;
 }

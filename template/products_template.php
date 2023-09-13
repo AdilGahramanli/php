@@ -34,9 +34,10 @@
         <input type="hidden" id="discountedPrice" name="discountedPrice" value="<?php echo discountedPrice($library["price"], $library["discount"]);?>" />
         <input type="hidden" id="price" name="price" value="<?php echo ($library["price"]) ?>" />
         <input type="hidden" id="discount" name="discount" value="<?php echo $library["discount"]; ?>" />
-
+        <input type="hidden" id="weight" name="weight" value="<?php echo $library["weight"]; ?>" />
         <label for="quantity"> Quantité : </label>
         <input type="number" id="quantity" name="quantity" min="0"><br><br>
+        <input type="hidden" id="transporteur" name="transporteur" value="veuillez choisir un transporteur" />
 
 
         <button type=submit <?php if (!$library['availability']) : ?>disabled<?php endif; ?>>

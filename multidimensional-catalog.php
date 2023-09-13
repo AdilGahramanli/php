@@ -9,6 +9,7 @@ $libraries = [
         "description" => "Le livre des ombres de la sorcière",
         "image" => "image/GrimoireRituelsMagiques.jpg",
         "availability" => true,
+        "weight" => 600,
 
     ],
    [
@@ -18,6 +19,7 @@ $libraries = [
         "description" => "Rituels de guérison et sorts d'apaisement </br>pour prendre soin de sa sorcière intérieure",
         "image" => "image/GrimoireDuBienEtre.jpg",
         "availability" => true,
+        "weight" => 200,
 
     ],
      [
@@ -27,6 +29,7 @@ $libraries = [
         "description" => "Recettes 100% magiques",
         "image" => "image/MesRecettes.jpg",
         "availability" => false,
+        "weight" => 400,
 
     ]
 ];
