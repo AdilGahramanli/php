@@ -34,7 +34,7 @@ $transportTTC = $transport_price + $total;
     </p>
 
     <p>
-        <?php echo "<b>Quantité </b> " . $quantity . " <br> "; ?>
+        <?php echo "<b>Quantité </b> <br> " . $quantity . " <br> "; ?>
     </p>
 
     <p>
