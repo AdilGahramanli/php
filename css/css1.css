@@ -186,3 +186,8 @@ button {
 .transporteurchoice {
     grid-area: T;
 }
+
+.table_names {
+    display:flex;
+    flex-direction: row;
+}

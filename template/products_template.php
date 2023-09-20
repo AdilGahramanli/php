@@ -1,4 +1,4 @@
-
+<?php include "database.php"; ?>
 
 
 <div class="item">
@@ -32,7 +32,7 @@
 
         <input type="hidden" id="title" name="title" value="<?php echo ($library["title"]); ?>" />
         <input type="hidden" id="discountedPrice" name="discountedPrice" value="<?php echo discountedPrice($library["price"], $library["discount"]);?>" />
-        <input type="hidden" id="price" name="price" value="<?php echo ($library["price"]) ?>" />
+        <input type="hidden" id="price" name="price" value="<?php echo ($library["price"]); ?>" />
         <input type="hidden" id="discount" name="discount" value="<?php echo $library["discount"]; ?>" />
         <input type="hidden" id="weight" name="weight" value="<?php echo $library["weight"]; ?>" />
         <label for="quantity"> Quantité : </label>
