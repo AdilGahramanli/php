@@ -1,4 +1,4 @@
-<?php include "database.php"; ?>
+
 
 
 <div class="item">
