@@ -4,11 +4,11 @@
 try {
     $mysqlConnection = new PDO(
 
-        'mysql:host=localhost;dbname=adilgmysql;charset=utf8',
+        'mysql:host=localhost;dbname=SiteEcommerce;charset=utf8',
 
-        'AdilGMySql',
+        'agahramanli',
 
-        'PasswordAdil_45'
+        'Debbian_1234'
 
     );
 } catch (Exception $e) {
